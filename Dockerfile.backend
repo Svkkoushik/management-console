@@ -1,0 +1,8 @@
+FROM python:3.12.3-slim
+
+WORKDIR /app
+COPY services/ingestion/requirements.lock ./
+RUN PYTHONDONTWRITEBYTECODE=1 pip install --no-cache-dir -r requirements.lock
+
+COPY services/ingestion/ .
+CMD python -m aerich.cli upgrade && python main.py

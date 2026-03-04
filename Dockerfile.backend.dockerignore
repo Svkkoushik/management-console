@@ -1,0 +1,9 @@
+Dockerfile*
+.dockerignore*
+**/.venv
+**/__pycache__
+
+**/.git
+**/.env*
+**/.ruff_cache
+**/.turbo

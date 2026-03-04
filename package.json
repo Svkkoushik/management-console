@@ -1,0 +1,23 @@
+{
+  "name": "management-console",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo run dev",
+    "start:docker": "docker compose up -d",
+    "initial-setup": "cd services/ingestion && rye sync",
+    "dev:ingestion": "cd services/ingestion && rye run dev",
+    "dev:webapp": "cd apps/webapp && pnpm run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "turbo run format"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "turbo": "^2.0.6"
+  },
+  "packageManager": "pnpm@9.5.0"
+}
